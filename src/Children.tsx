@@ -1,11 +1,8 @@
+import React from "react"
 function Children(props) {
-  console.log('子组件执行')
+  console.log('子组件render')
 
-  return (
-    <div>
-      {props.a} {props.b}
-    </div>
-  )
+  return <div>{ JSON.stringify(props) }</div>
 }
 
-export default Children
+export default React.memo(Children)
